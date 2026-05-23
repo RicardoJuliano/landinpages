@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORMA — Suplementação Científica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,700;0,900;1,700;1,900&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- NAV: logo centralizado, links simétricos -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <nav class="nav__side nav__side--left">
+        <a href="#produtos">Produtos</a>
+        <a href="#ciencia">Ciência</a>
+      </nav>
+      <a href="#" class="nav__logo">FORMA<span>.</span></a>
+      <nav class="nav__side nav__side--right">
+        <a href="#depoimentos">Resultados</a>
+        <a href="#produtos" class="nav__cta">Comprar</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <!-- mobile menu -->
+    <div class="nav__mobile" id="navMobile">
+      <a href="#produtos">Produtos</a>
+      <a href="#ciencia">Ciência</a>
+      <a href="#depoimentos">Resultados</a>
+      <a href="#produtos" class="nav__cta">Comprar Agora</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-num" aria-hidden="true">01</div>
+    <div class="hero__inner container">
+
+      <div class="hero__eyebrow reveal">
+        <span class="pill">Suplementação Científica</span>
+        <span class="eyebrow-rule"></span>
+        <span class="eyebrow-note">São Paulo — Desde 2019</span>
+      </div>
+
+      <div class="hero__type">
+        <div class="hero__line hl-1 reveal delay-1">SUPERE</div>
+        <div class="hero__line hl-2 reveal delay-2">
+          <em class="hl-serif">cada</em>
+          <span class="hl-big">LIMITE</span>
+        </div>
+        <div class="hero__line hl-3 reveal delay-3">POSSÍVEL.</div>
+      </div>
+
+      <div class="hero__bar reveal delay-4">
+        <div class="hero__bar-stats">
+          <div class="hstat">
+            <span class="hstat__num" data-target="12400">0</span><sup>+</sup>
+            <span class="hstat__label">Atletas Ativos</span>
+          </div>
+          <div class="hstat__div"></div>
+          <div class="hstat">
+            <span class="hstat__num" data-target="98">0</span><sup>%</sup>
+            <span class="hstat__label">Satisfação</span>
+          </div>
+          <div class="hstat__div"></div>
+          <div class="hstat">
+            <span class="hstat__num" data-target="47">0</span><sup>+</sup>
+            <span class="hstat__label">Produtos</span>
+          </div>
+        </div>
+        <div class="hero__bar-actions">
+          <a href="#produtos" class="btn btn--dark">Explorar Linha</a>
+          <a href="#ciencia" class="btn btn--ghost-dark">
+            Como funciona
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ MARQUEE ═══════════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>WHEY PROTEIN</span><b>—</b>
+      <span>PRE-WORKOUT</span><b>—</b>
+      <span>CREATINA</span><b>—</b>
+      <span>BCAA</span><b>—</b>
+      <span>TERMOGÊNICO</span><b>—</b>
+      <span>COLÁGENO</span><b>—</b>
+      <span>WHEY PROTEIN</span><b>—</b>
+      <span>PRE-WORKOUT</span><b>—</b>
+      <span>CREATINA</span><b>—</b>
+      <span>BCAA</span><b>—</b>
+      <span>TERMOGÊNICO</span><b>—</b>
+      <span>COLÁGENO</span><b>—</b>
+    </div>
+  </div>
+
+  <!-- ═══════════════ PRODUTOS ═══════════════ -->
+  <section class="section produtos" id="produtos">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="sh__left">
+          <p class="sh__tag">/ 01</p>
+          <h2 class="sh__title">Linha <em>Completa</em></h2>
+        </div>
+        <p class="sh__desc">Seis formulações de elite, cada uma otimizada para um objetivo específico. Ingredientes farmacêuticos, doses eficazes, sem enchimentos.</p>
+      </div>
+
+      <div class="plist">
+        <div class="plist__head">
+          <span>Nº</span>
+          <span>Produto</span>
+          <span>Objetivo</span>
+          <span>Preço</span>
+          <span></span>
+        </div>
+
+        <div class="prow reveal" data-delay="0">
+          <span class="prow__num">01</span>
+          <div class="prow__info">
+            <h3 class="prow__name">Whey Protein <em>Isolado</em></h3>
+            <p class="prow__spec">27g proteína / dose — 0g gordura — Lactose free — 900g</p>
+          </div>
+          <div class="prow__tags">
+            <span>Hipertrofia</span>
+            <span>Recuperação</span>
+          </div>
+          <span class="prow__price">R$&nbsp;189<sup>,90</sup></span>
+          <button class="prow__btn" aria-label="Adicionar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+
+        <div class="prow reveal" data-delay="60">
+          <span class="prow__num">02</span>
+          <div class="prow__info">
+            <h3 class="prow__name">Pre-Workout <em>Extremo</em></h3>
+            <p class="prow__spec">300mg cafeína — Beta-alanina 3.2g — L-Citrulina 6g</p>
+          </div>
+          <div class="prow__tags">
+            <span>Energia</span>
+            <span>Foco</span>
+          </div>
+          <span class="prow__price">R$&nbsp;129<sup>,90</sup></span>
+          <button class="prow__btn" aria-label="Adicionar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+
+        <div class="prow reveal" data-delay="120">
+          <span class="prow__num">03</span>
+          <div class="prow__info">
+            <h3 class="prow__name">Creatina <em>Monohidratada</em></h3>
+            <p class="prow__spec">Pureza 99,9% — Creapure® certificada — 300g puro</p>
+          </div>
+          <div class="prow__tags">
+            <span>Força</span>
+            <span>Volume</span>
+          </div>
+          <span class="prow__price">R$&nbsp;79<sup>,90</sup></span>
+          <button class="prow__btn" aria-label="Adicionar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+
+        <div class="prow reveal" data-delay="180">
+          <span class="prow__num">04</span>
+          <div class="prow__info">
+            <h3 class="prow__name">BCAA <em>2:1:1</em></h3>
+            <p class="prow__spec">Leucina 5g — Isoleucina 2.5g — Valina 2.5g por dose</p>
+          </div>
+          <div class="prow__tags">
+            <span>Recuperação</span>
+            <span>Anti-catabólico</span>
+          </div>
+          <span class="prow__price">R$&nbsp;99<sup>,90</sup></span>
+          <button class="prow__btn" aria-label="Adicionar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+
+        <div class="prow reveal" data-delay="240">
+          <span class="prow__num">05</span>
+          <div class="prow__info">
+            <h3 class="prow__name">Termogênico <em>Black</em></h3>
+            <p class="prow__spec">Extrato de Pimenta — Chá Verde 400mg — L-Tirosina</p>
+          </div>
+          <div class="prow__tags">
+            <span>Cutting</span>
+            <span>Metabolismo</span>
+          </div>
+          <span class="prow__price">R$&nbsp;109<sup>,90</sup></span>
+          <button class="prow__btn" aria-label="Adicionar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+
+        <div class="prow reveal" data-delay="300">
+          <span class="prow__num">06</span>
+          <div class="prow__info">
+            <h3 class="prow__name">Colágeno <em>Hidrolisado</em></h3>
+            <p class="prow__spec">Tipo I e III — Vitamina C 200mg — 300g pó fino</p>
+          </div>
+          <div class="prow__tags">
+            <span>Articulações</span>
+            <span>Saúde</span>
+          </div>
+          <span class="prow__price">R$&nbsp;89<sup>,90</sup></span>
+          <button class="prow__btn" aria-label="Adicionar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CIÊNCIA / BENEFÍCIOS ═══════════════ -->
+  <section class="section ciencia" id="ciencia">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="sh__left">
+          <p class="sh__tag">/ 02</p>
+          <h2 class="sh__title">A <em>Ciência</em><br>por trás</h2>
+        </div>
+        <p class="sh__desc">Cada produto FORMA é desenvolvido com base em evidências clínicas. Nenhum ingrediente sem propósito. Nenhuma dose abaixo do eficaz.</p>
+      </div>
+
+      <div class="bens">
+        <div class="ben reveal" data-delay="0">
+          <div class="ben__bgnum" aria-hidden="true">01</div>
+          <div class="ben__content">
+            <h3 class="ben__title">Certificação<br>Internacional</h3>
+            <p class="ben__text">Testados por laboratórios ISO 17025 e aprovados por organismos independentes. O que está no rótulo, está no produto — sem exceções.</p>
+            <a href="#" class="link-arrow">Ver certificações <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+        <div class="ben reveal" data-delay="150">
+          <div class="ben__bgnum" aria-hidden="true">02</div>
+          <div class="ben__content">
+            <h3 class="ben__title">Doses<br>Eficazes</h3>
+            <p class="ben__text">Formulamos com as doses exatas usadas em estudos clínicos. Sem proprietary blends. Sem ingredientes subclínicos. Transparência total.</p>
+            <a href="#" class="link-arrow">Ver formulações <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+        <div class="ben reveal" data-delay="300">
+          <div class="ben__bgnum" aria-hidden="true">03</div>
+          <div class="ben__content">
+            <h3 class="ben__title">Resultado<br>Garantido</h3>
+            <p class="ben__text">30 dias de garantia incondicional. Se não sentir a diferença, devolvemos 100% do valor. Mais de 12.000 atletas já confiam em FORMA.</p>
+            <a href="#" class="link-arrow">Ver depoimentos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="logistics reveal">
+        <div class="log-item">
+          <span class="log-item__label">Frete grátis</span>
+          <span class="log-item__value">acima de R$299</span>
+        </div>
+        <div class="log-div"></div>
+        <div class="log-item">
+          <span class="log-item__label">Entrega</span>
+          <span class="log-item__value">até 3 dias úteis</span>
+        </div>
+        <div class="log-div"></div>
+        <div class="log-item">
+          <span class="log-item__label">Parcelamento</span>
+          <span class="log-item__value">12x sem juros</span>
+        </div>
+        <div class="log-div"></div>
+        <div class="log-item">
+          <span class="log-item__label">Garantia</span>
+          <span class="log-item__value">30 dias — incondicional</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ DEPOIMENTOS ═══════════════ -->
+  <section class="section depos" id="depoimentos">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="sh__left">
+          <p class="sh__tag">/ 03</p>
+          <h2 class="sh__title">O que <em>dizem</em></h2>
+        </div>
+      </div>
+
+      <div class="ts reveal">
+        <div class="ts__stage" id="tsStage">
+
+          <div class="ts__item ts__item--active" data-idx="0">
+            <p class="ts__bigmark" aria-hidden="true">"</p>
+            <blockquote class="ts__quote">Em três meses com o Whey Isolado e o Pre-Workout, minha performance aumentou de forma significativa. Nunca mais volto para outra marca.</blockquote>
+            <footer class="ts__foot">
+              <div class="ts__avatar" data-i="LM"></div>
+              <div>
+                <strong>Lucas Mendes</strong>
+                <span>Crossfit — São Paulo, SP</span>
+              </div>
+              <div class="ts__stars" aria-label="5 estrelas">★★★★★</div>
+            </footer>
+          </div>
+
+          <div class="ts__item" data-idx="1">
+            <p class="ts__bigmark" aria-hidden="true">"</p>
+            <blockquote class="ts__quote">A Creatina FORMA mudou minha força máxima. Subiu 22% em quatro meses. O que me convenceu foi a transparência — Creapure certificada, sem misturas.</blockquote>
+            <footer class="ts__foot">
+              <div class="ts__avatar" data-i="PF"></div>
+              <div>
+                <strong>Priscila Faria</strong>
+                <span>Powerlifting — Rio de Janeiro, RJ</span>
+              </div>
+              <div class="ts__stars" aria-label="5 estrelas">★★★★★</div>
+            </footer>
+          </div>
+
+          <div class="ts__item" data-idx="2">
+            <p class="ts__bigmark" aria-hidden="true">"</p>
+            <blockquote class="ts__quote">O Termogênico Black é o único que realmente funciona sem me deixar ansioso. Perdi 8kg em 60 dias mantendo toda a massa. Isso não tem preço.</blockquote>
+            <footer class="ts__foot">
+              <div class="ts__avatar" data-i="RC"></div>
+              <div>
+                <strong>Rafael Costa</strong>
+                <span>Fisiculturismo — Belo Horizonte, MG</span>
+              </div>
+              <div class="ts__stars" aria-label="5 estrelas">★★★★★</div>
+            </footer>
+          </div>
+
+        </div>
+
+        <div class="ts__nav">
+          <button class="ts__arrow" id="tsPrev" aria-label="Anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          <div class="ts__dots" id="tsDots">
+            <button class="ts__dot ts__dot--active" data-idx="0" aria-label="Depoimento 1"></button>
+            <button class="ts__dot" data-idx="1" aria-label="Depoimento 2"></button>
+            <button class="ts__dot" data-idx="2" aria-label="Depoimento 3"></button>
+          </div>
+          <button class="ts__arrow" id="tsNext" aria-label="Próximo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA SPLIT ═══════════════ -->
+  <section class="cta-split reveal">
+    <div class="cta-split__left">
+      <p class="sh__tag sh__tag--white">/ Oferta de Estreia</p>
+      <h2 class="cta-split__title">
+        COMECE<br>
+        <em>hoje.</em>
+      </h2>
+      <p class="cta-split__sub">Use o cupom <strong>FORMA15</strong> e ganhe 15% de desconto na primeira compra.</p>
+      <a href="#produtos" class="btn btn--white">Aproveitar Desconto</a>
+      <p class="cta-split__guarantee">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        30 dias de garantia incondicional
+      </p>
+    </div>
+    <div class="cta-split__right">
+      <div class="cta-split__visual">
+        <div class="can can--back"></div>
+        <div class="can can--mid"></div>
+        <div class="can can--front"></div>
+      </div>
+      <div class="cta-split__badges">
+        <span class="badge">ISO Certificado</span>
+        <span class="badge">Frete Grátis R$299+</span>
+        <span class="badge">12x Sem Juros</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <!-- Newsletter bar -->
+    <div class="footer__nl">
+      <div class="container">
+        <div class="footer__nl-inner">
+          <div>
+            <h3 class="footer__nl-title">Receba conteúdo de performance</h3>
+            <p>Promoções exclusivas, protocolos e novidades. Sem spam.</p>
+          </div>
+          <form class="footer__nl-form" id="nlForm">
+            <input type="email" placeholder="seu@email.com" required />
+            <button type="submit" class="btn btn--dark">Inscrever</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="#" class="nav__logo">FORMA<span>.</span></a>
+            <p>Suplementação com propósito científico. Para quem não aceita o ordinário.</p>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" aria-label="TikTok">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+              </a>
+              <a href="#" aria-label="YouTube">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="3"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4>Produtos</h4>
+            <ul>
+              <li><a href="#">Whey Protein</a></li>
+              <li><a href="#">Pre-Workout</a></li>
+              <li><a href="#">Creatina</a></li>
+              <li><a href="#">BCAA</a></li>
+              <li><a href="#">Ver todos</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Empresa</h4>
+            <ul>
+              <li><a href="#">Sobre FORMA</a></li>
+              <li><a href="#">Ciência</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Parcerias</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Suporte</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Trocas e Devoluções</a></li>
+              <li><a href="#">Rastrear Pedido</a></li>
+              <li><a href="#">LGPD</a></li>
+              <li><a href="#">Privacidade</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 FORMA Suplementos. Todos os direitos reservados.</p>
+        <p>CNPJ 00.000.000/0001-00 — São Paulo, SP</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
