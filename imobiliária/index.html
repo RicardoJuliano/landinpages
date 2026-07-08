@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurelia — Imóveis de Alto Padrão</title>
+<meta name="description" content="Aurelia. Acesso exclusivo aos imóveis mais refinados e um olhar cuidadoso em cada detalhe da sua jornada.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+
+<div class="loader" id="loader">
+  <div class="loader-mark">Aurelia</div>
+</div>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#" class="logo" data-cursor="link">
+      <span class="logo-mark">✦</span> Aurelia
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#sobre" data-cursor="link">Sobre</a>
+      <a href="#imoveis" data-cursor="link">Imóveis</a>
+      <a href="#equipe" data-cursor="link">Equipe</a>
+      <a href="#duvidas" data-cursor="link">Dúvidas</a>
+      <a href="#contato" class="nav-cta" data-cursor="link">Fale conosco</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram" data-cursor="link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" data-cursor="link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="10" x2="7" y2="17" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="6.7" r="1" fill="currentColor"/><path d="M11 17v-4.5c0-1.5 1-2.5 2.4-2.5s2.1 1 2.1 2.6V17" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#imoveis">Imóveis</a>
+    <a href="#equipe">Equipe</a>
+    <a href="#duvidas">Dúvidas</a>
+    <a href="#contato">Fale conosco</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" id="heroBg">
+      <video
+        class="hero-video"
+        autoplay muted loop playsinline
+        poster="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1800&auto=format&fit=crop">
+        <source src="assets/video/hero-video.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-wash"></div>
+    </div>
+    <svg class="hero-arches" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,300 L0,140 A60,60 0 0 1 120,140 L120,300 Z" />
+      <path d="M180,300 L180,100 A80,80 0 0 1 340,100 L340,300 Z" />
+      <path d="M400,300 L400,150 A55,55 0 0 1 510,150 L510,300 Z" />
+      <path d="M900,300 L900,110 A75,75 0 0 1 1050,110 L1050,300 Z" />
+      <path d="M1080,300 L1080,150 A55,55 0 0 1 1190,150 L1190,300 Z" />
+    </svg>
+
+    <div class="container hero-content">
+      <p class="eyebrow reveal-up">Aurelia Residences</p>
+      <h1 class="hero-title">
+        <span class="reveal-line"><span>Viver o luxo,</span></span>
+        <span class="reveal-line"><span class="italic">redefinido.</span></span>
+      </h1>
+      <p class="hero-sub reveal-up">Acesso exclusivo aos imóveis mais refinados do país, com um olhar cuidadoso em cada detalhe da sua jornada.</p>
+      <div class="hero-cta reveal-up">
+        <a href="#imoveis" class="btn btn-primary" data-cursor="link">
+          <span>Agendar uma consultoria</span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-cue reveal-up">
+      <span>Role para explorar</span>
+      <div class="scroll-cue-line"><i></i></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>Residências exclusivas</span><span>✦</span>
+      <span>Curadoria de imóveis</span><span>✦</span>
+      <span>Atendimento particular</span><span>✦</span>
+      <span>Portfólio internacional</span><span>✦</span>
+      <span>Residências exclusivas</span><span>✦</span>
+      <span>Curadoria de imóveis</span><span>✦</span>
+      <span>Atendimento particular</span><span>✦</span>
+      <span>Portfólio internacional</span><span>✦</span>
+    </div>
+  </div>
+
+  <!-- SOBRE / BUILT AROUND BETTER LIVING -->
+  <section class="section about" id="sobre">
+    <div class="container about-grid">
+      <div class="about-text">
+        <p class="eyebrow reveal">Nossa essência</p>
+        <h2 class="reveal">Construído para um <span class="italic">viver</span> melhor</h2>
+        <p class="body-lg reveal">Nossa missão nasce de um desejo bem simples: fazer com que morar bem, more perto de você. Buscamos os espaços que unem arquitetura refinada e a sensação genuína de estar em casa.</p>
+        <a href="#equipe" class="link-underline reveal" data-cursor="link">Conheça nossa equipe →</a>
+      </div>
+      <div class="about-image reveal-img">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1200&auto=format&fit=crop" alt="Interior refinado de residência de luxo">
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-number" data-count="180">0</span><span class="stat-plus">+</span>
+        <p>Imóveis negociados</p>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number" data-count="15">0</span>
+        <p>Anos de experiência</p>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number" data-count="98">0</span><span class="stat-plus">%</span>
+        <p>Clientes satisfeitos</p>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-prefix">R$</span><span class="stat-number" data-count="2.4">0</span><span class="stat-plus">B</span>
+        <p>Em transações</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE RENTALS -->
+  <section class="section rentals" id="imoveis">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow reveal">Aluguéis por temporada</p>
+          <h2 class="reveal">Aluguéis exclusivos</h2>
+        </div>
+        <p class="section-desc reveal">Residências cuidadosamente selecionadas que definem o luxo para quem exige o melhor.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="property-card reveal-up" data-cursor="link">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Casa Paloma">
+          </div>
+          <div class="property-info">
+            <span class="property-tag">Casa Paloma</span>
+            <h3>Casa Paloma</h3>
+            <p class="property-loc">Trancoso, BA</p>
+            <p class="property-price">R$ 8.200 <span>/ semana</span></p>
+          </div>
+        </article>
+
+        <article class="property-card featured reveal-up" data-cursor="link">
+          <div class="property-image">
+            <span class="badge">Em destaque</span>
+            <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?q=80&w=1200&auto=format&fit=crop" alt="Pavilhão do Deserto">
+          </div>
+          <div class="property-info">
+            <span class="property-tag">Pavilhão do Deserto</span>
+            <h3>Pavilhão do Deserto</h3>
+            <p class="property-loc">Alto Paraíso, GO</p>
+            <p class="property-price">R$ 11.400 <span>/ semana</span></p>
+          </div>
+        </article>
+
+        <article class="property-card reveal-up" data-cursor="link">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Villa Serrano">
+          </div>
+          <div class="property-info">
+            <span class="property-tag">Villa Serrano</span>
+            <h3>Villa Serrano</h3>
+            <p class="property-loc">Campos do Jordão, SP</p>
+            <p class="property-price">R$ 6.900 <span>/ semana</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="section testimonial">
+    <div class="container testimonial-grid">
+      <div class="testimonial-image reveal-img">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop" alt="Equipe Aurelia reunida com clientes">
+      </div>
+      <div class="testimonial-text">
+        <p class="eyebrow reveal">Palavra de quem confiou</p>
+        <p class="quote reveal">"A dedicação e atenção aos detalhes tornaram a busca pela nossa casa nova simples e leve. Nos sentimos acompanhados em cada etapa."</p>
+        <div class="quote-author reveal">
+          <span class="quote-line"></span>
+          <div>
+            <strong>Sarah &amp; Michael Costa</strong>
+            <span>Compradores, Angra dos Reis</span>
+          </div>
+        </div>
+        <div class="testimonial-nav reveal">
+          <button class="nav-circle" id="testPrev" aria-label="Depoimento anterior" data-cursor="link">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="nav-circle" id="testNext" aria-label="Próximo depoimento" data-cursor="link">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section team" id="equipe">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow reveal">O time</p>
+        <h2 class="reveal">Conheça nossa equipe</h2>
+        <p class="section-desc reveal">Nossos especialistas experientes conduzem você em cada etapa do caminho até sua nova casa.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card reveal-up" data-cursor="link">
+          <div class="team-image"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop" alt="Rafael Duarte"></div>
+          <h3>Rafael Duarte</h3>
+          <p>Sócio-fundador</p>
+        </div>
+        <div class="team-card reveal-up" data-cursor="link">
+          <div class="team-image"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="Catarina Lopes"></div>
+          <h3>Catarina Lopes</h3>
+          <p>Diretora de Vendas</p>
+        </div>
+        <div class="team-card reveal-up" data-cursor="link">
+          <div class="team-image"><img src="https://images.unsplash.com/photo-1571939228382-b2f2b585ce15?q=80&w=800&auto=format&fit=crop" alt="Henrique Vasconcelos"></div>
+          <h3>Henrique Vasconcelos</h3>
+          <p>Especialista em Imóveis</p>
+        </div>
+      </div>
+
+      <div class="join-banner reveal">
+        <div>
+          <p class="eyebrow">Junte-se a nós</p>
+          <h3>Buscamos profissionais talentosos para moldar o futuro do mercado de luxo.</h3>
+        </div>
+        <a href="#contato" class="btn btn-outline" data-cursor="link">Candidate-se</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR SALE SHOWCASE -->
+  <section class="section rentals alt">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow reveal">À venda</p>
+          <h2 class="reveal">Residências selecionadas</h2>
+        </div>
+        <p class="section-desc reveal">Propriedades cuidadosamente avaliadas que definem o padrão do mercado de luxo.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="property-card reveal-up" data-cursor="link">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1200&auto=format&fit=crop" alt="Residência Alto do Vale">
+          </div>
+          <div class="property-info">
+            <span class="property-tag">Alto do Vale</span>
+            <h3>Residência Alto do Vale</h3>
+            <p class="property-loc">Gramado, RS</p>
+            <p class="property-price">R$ 9.800.000</p>
+          </div>
+        </article>
+
+        <article class="property-card featured reveal-up" data-cursor="link">
+          <div class="property-image">
+            <span class="badge">Em destaque</span>
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="Villa Costa Azul">
+          </div>
+          <div class="property-info">
+            <span class="property-tag">Costa Azul</span>
+            <h3>Villa Costa Azul</h3>
+            <p class="property-loc">Búzios, RJ</p>
+            <p class="property-price">R$ 18.500.000</p>
+          </div>
+        </article>
+
+        <article class="property-card reveal-up" data-cursor="link">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1200&auto=format&fit=crop" alt="Cobertura Jardins">
+          </div>
+          <div class="property-info">
+            <span class="property-tag">Jardins</span>
+            <h3>Cobertura Jardins</h3>
+            <p class="property-loc">São Paulo, SP</p>
+            <p class="property-price">R$ 14.200.000</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow reveal">Como trabalhamos</p>
+        <h2 class="reveal">Comprometidos com a excelência em cada etapa</h2>
+        <p class="section-desc reveal">Do primeiro contato à assinatura do contrato, cuidamos de cada detalhe da sua jornada.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-item reveal-up">
+          <div class="process-image"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=900&auto=format&fit=crop" alt="Consultoria personalizada"></div>
+          <span class="process-num">01</span>
+          <h3>Consultoria personalizada</h3>
+        </div>
+        <div class="process-item reveal-up">
+          <div class="process-image"><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=900&auto=format&fit=crop" alt="Visitas guiadas"></div>
+          <span class="process-num">02</span>
+          <h3>Visitas guiadas e exclusivas</h3>
+        </div>
+        <div class="process-item reveal-up">
+          <div class="process-image"><img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=900&auto=format&fit=crop" alt="Fechamento tranquilo"></div>
+          <span class="process-num">03</span>
+          <h3>Fechamento tranquilo e seguro</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="duvidas">
+    <div class="container faq-wrap">
+      <div class="section-head center">
+        <p class="eyebrow reveal">FAQ</p>
+        <h2 class="reveal">Esclarecendo dúvidas</h2>
+        <p class="section-desc reveal">Tudo o que você precisa saber sobre comprar, vender e investir em imóveis de luxo.</p>
+      </div>
+
+      <div class="accordion reveal" id="accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Quais regiões vocês atendem?</span>
+            <span class="accordion-icon"></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Atuamos nos principais destinos de alto padrão do Brasil — de litoral a serra — e mantemos parcerias internacionais para clientes que buscam imóveis fora do país.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Quanto tempo leva o processo de compra?</span>
+            <span class="accordion-icon"></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Em média, entre 45 e 90 dias, dependendo da documentação e da forma de pagamento. Nossa equipe acompanha cada etapa para reduzir prazos sem abrir mão da segurança jurídica.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Vocês atendem compradores internacionais?</span>
+            <span class="accordion-icon"></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Sim. Temos experiência com clientes estrangeiros, incluindo suporte com câmbio, documentação consular e representação remota durante todo o processo.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Quais taxas e custos devo considerar?</span>
+            <span class="accordion-icon"></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Os custos variam entre ITBI, escritura, registro e honorários. Apresentamos uma simulação detalhada e transparente antes de qualquer compromisso.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>O que torna a Aurelia diferente?</span>
+            <span class="accordion-icon"></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Curadoria seletiva, atendimento particular e um portfólio que não está disponível em nenhum outro lugar. Tratamos cada cliente como único, do primeiro encontro à entrega das chaves.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="contato">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo"><span class="logo-mark">✦</span> Aurelia</a>
+      <p>Acesso exclusivo aos imóveis mais refinados, com um olhar cuidadoso em cada detalhe.</p>
+    </div>
+
+    <div class="footer-newsletter">
+      <p class="eyebrow">Assine nossa newsletter</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Seu melhor e-mail" required>
+        <button type="submit" class="btn btn-primary">Inscrever</button>
+      </form>
+      <p class="newsletter-msg" id="newsletterMsg"></p>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <div class="footer-cols">
+      <div>
+        <span class="footer-col-title">Empresa</span>
+        <a href="#sobre">Sobre</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#imoveis">Imóveis</a>
+      </div>
+      <div>
+        <span class="footer-col-title">Legal</span>
+        <a href="#">Termos de uso</a>
+        <a href="#">Privacidade</a>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram" data-cursor="link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" data-cursor="link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="10" x2="7" y2="17" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="6.7" r="1" fill="currentColor"/><path d="M11 17v-4.5c0-1.5 1-2.5 2.4-2.5s2.1 1 2.1 2.6V17" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </div>
+      <p>© 2026 Aurelia. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
